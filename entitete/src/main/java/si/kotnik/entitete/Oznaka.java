@@ -22,6 +22,14 @@ public class Oznaka {
     @ManyToMany(mappedBy = "oznake")
     private List<NakupovalniSeznam> nakupovalniSeznami;
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Naslov: " + naslov);
+        sb.append(" Opis: " + opis);
+        return sb.toString();
+    }
+
     // Getters and setters
     public Integer getId() {
         return id;

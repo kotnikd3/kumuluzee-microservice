@@ -1,15 +1,15 @@
-# kumuluzee-learning
+# kumuluzee-learning-jpa
 ### About the project
 Trying [KumuluzEE](https://ee.kumuluz.com/) framework for building cloud native microservices in Java.  
-Learning Java Beans, Servlets, Maven, Hibernate, REST.
+Learning Java CDI Beans, Servlets, Maven, Hibernate, REST.
 
 ### Create a PostgreSQL database in Docker
 ``` bash
 # get the container and create it
-sudo docker start -d --name postgres-jdbc -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=nakupovalniseznami -p 5432:5432 postgres:13
+sudo docker run -d --name postgres-jpa -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=nakupovalniseznami -p 5432:5432 postgres:13
 
 # rerun
-sudo docker start postgres-jdbc
+sudo docker start postgres-jpa
 ```
 
 ### Run microservice

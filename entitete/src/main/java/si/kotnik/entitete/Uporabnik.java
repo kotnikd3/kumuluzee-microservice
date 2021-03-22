@@ -30,9 +30,9 @@ public class Uporabnik {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Ime:" + ime);
-        sb.append(" Priimek:" + priimek);
-        sb.append(" Uporabnisko ime:" + uporabniskoIme);
+        sb.append("Ime: " + ime);
+        sb.append(" Priimek: " + priimek);
+        sb.append(" Uporabnisko ime: " + uporabniskoIme);
         return sb.toString();
     }
 

@@ -2,6 +2,7 @@ package si.kotnik.entitete;
 
 import javax.persistence.*;
 import java.time.Instant;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
@@ -24,9 +25,9 @@ public class NakupovalniSeznam {
     private String opis;
 
     @Column(name = "ustvarjen")
-    private Instant ustvarjen;
+    private LocalDateTime ustvarjen;
 
-    @ManyToOne
+    @ManyToOne()
     @JoinColumn(name = "uporabnik_id")
     private Uporabnik uporabnik;
 
@@ -43,6 +44,13 @@ public class NakupovalniSeznam {
     )
     private List<Oznaka> oznake;
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Naziv: " + naziv);
+        sb.append(" Opis: " + opis);
+        return sb.toString();
+    }
 
     // Getters and setters
     public Integer getId() {
@@ -69,11 +77,11 @@ public class NakupovalniSeznam {
         this.opis = opis;
     }
 
-    public Instant getUstvarjen() {
+    public LocalDateTime getUstvarjen() {
         return ustvarjen;
     }
 
-    public void setUstvarjen(Instant ustvarjen) {
+    public void setUstvarjen(LocalDateTime ustvarjen) {
         this.ustvarjen = ustvarjen;
     }
 

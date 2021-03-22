@@ -20,9 +20,17 @@ public class Artikel {
     @Column(name = "opis")
     private String opis;
 
-    @ManyToOne
+    @ManyToOne()
     @JoinColumn(name = "nakupovalni_seznam_id")
     private NakupovalniSeznam nakupovalniSeznam;
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Naslov: " + naziv);
+        sb.append(" Opis: " + opis);
+        return sb.toString();
+    }
 
     // Getters and setters
     public Integer getId() {
