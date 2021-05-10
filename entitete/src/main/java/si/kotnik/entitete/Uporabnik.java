@@ -1,5 +1,6 @@
 package si.kotnik.entitete;
 
+import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
 import java.util.List;
 
@@ -25,6 +26,7 @@ public class Uporabnik {
     private String email;
 
     @OneToMany(mappedBy = "uporabnik", cascade = CascadeType.ALL)
+    @JsonbTransient
     private List<NakupovalniSeznam> nakupovalniSeznami;
 
     @Override

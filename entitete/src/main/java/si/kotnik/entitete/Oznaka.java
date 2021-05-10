@@ -1,5 +1,6 @@
 package si.kotnik.entitete;
 
+import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
 import java.util.List;
 
@@ -18,7 +19,7 @@ public class Oznaka {
     private String naslov;
     private String opis;
 
-//    @Transient
+    @JsonbTransient
     @ManyToMany(mappedBy = "oznake")
     private List<NakupovalniSeznam> nakupovalniSeznami;
 

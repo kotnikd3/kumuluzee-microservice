@@ -1,5 +1,6 @@
 package si.kotnik.entitete;
 
+import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
 import java.time.Instant;
 import java.time.LocalDateTime;
@@ -100,6 +101,8 @@ public class NakupovalniSeznam {
     public void setArtikli(List<Artikel> artikli) {
         this.artikli = artikli;
     }
+
+    public void addArtikel(Artikel artikel) { this.artikli.add(artikel); }
 
     public List<Oznaka> getOznake() {
         return oznake;

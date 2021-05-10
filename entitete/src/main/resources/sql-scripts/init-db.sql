@@ -7,7 +7,7 @@ INSERT INTO nakupovalni_seznam (naziv, opis, ustvarjen, uporabnik_id) VALUES ('s
 INSERT INTO nakupovalni_seznam (naziv, opis, ustvarjen, uporabnik_id) VALUES ('seznam racunalnikov', 'racunalniki', '2020-05-28T13:13:13.444Z', 3);
 
 INSERT INTO artikel (naziv, opis, nakupovalni_seznam_id) VALUES ('trdi disk', 'hdd', 1);
-INSERT INTO artikel (naziv, opis, nakupovalni_seznam_id) VALUES ('monitor', 'ips', 2);
+INSERT INTO artikel (naziv, opis, nakupovalni_seznam_id) VALUES ('monitor', 'ips', 1);
 INSERT INTO artikel (naziv, opis, nakupovalni_seznam_id) VALUES ('racunalnik', 'apple', 3);
 
 INSERT INTO oznaka (naslov, opis) VALUES ('naslov oznake', 'to je nek opis');

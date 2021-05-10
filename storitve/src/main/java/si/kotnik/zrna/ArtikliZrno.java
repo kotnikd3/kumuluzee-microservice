@@ -50,7 +50,7 @@ public class ArtikliZrno {
     }
 
     @Transactional
-    public Artikel dodajUporabnika(Artikel artikel) {
+    public Artikel dodajArtikel(Artikel artikel) {
         if (artikel != null)
             em.persist(artikel);
 

@@ -50,6 +50,8 @@ public class UporabnikiZrno {
         return uporabnik;
     }
 
+    // public Uporabnik pridobiUporabnikaCriteriaAPI()
+
     @Transactional
     public Uporabnik dodajUporabnika(Uporabnik uporabnik) {
         if (uporabnik != null)

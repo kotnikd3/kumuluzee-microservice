@@ -1,5 +1,6 @@
 package si.kotnik.entitete;
 
+import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
 
 @Entity
@@ -20,6 +21,7 @@ public class Artikel {
     @Column(name = "opis")
     private String opis;
 
+    @JsonbTransient
     @ManyToOne()
     @JoinColumn(name = "nakupovalni_seznam_id")
     private NakupovalniSeznam nakupovalniSeznam;

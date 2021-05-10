@@ -1,5 +1,6 @@
 package si.kotnik.zrna;
 
+import si.kotnik.entitete.Artikel;
 import si.kotnik.entitete.NakupovalniSeznam;
 
 import javax.annotation.PostConstruct;
